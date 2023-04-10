@@ -34,17 +34,17 @@ These tokens can be redeemed for advanced training, workshops, or even one-on-on
 Junior members will also have the opportunity to earn tokens by contributing to the guild in various ways, such as creating educational content or assisting in community management tasks.
 IV. Contract Negotiation and Career Support Services
 
-Like the Screen Actors Guild, SEG will provide members with contract negotiation and career support services. This will include:
+Like the Screen Actors Guild, GSDG will provide members with contract negotiation and career support services. This will include:
 
 A team of experienced negotiators who will advocate for fair and competitive compensation packages on behalf of members.
 Access to a database of job opportunities and projects specifically tailored to the skills and expertise of SEG members.
 Ongoing professional development workshops and seminars to help members stay current in their field and maintain their marketability.
 Budget and Funding:
 
-The initial budget for establishing the Software Engineers Guild, including the development of the online platform and marketing efforts, is estimated at $500,000. To secure this funding, we will seek investments from individuals and organizations with a vested interest in the success of the software engineering industry, such as tech companies, venture capitalists, and educational institutions.
+The initial budget for establishing the Global Software Developers' Guild, including the development of the online platform and marketing efforts, is estimated at $500,000. To secure this funding, we will seek investments from individuals and organizations with a vested interest in the success of the software engineering industry, such as tech companies, venture capitalists, and educational institutions.
 
 With the implementation of the Education Token system, the ongoing costs of maintaining and growing the guild will be largely self-sustained, as members will be investing their time and expertise in exchange for valuable educational opportunities.
 
 Conclusion:
 
-The Software Engineers Guild represents a unique and innovative approach to professional development in the field of software engineering. By fostering a community of collaboration and continuous learning, and by offering crucial career support services, SEG has the potential to transform the industry and create a new standard for the way software engineers grow and succeed in their careers.
+The Global Software Developers' Guild represents a unique and innovative approach to professional development in the field of software engineering. By fostering a community of collaboration and continuous learning, and by offering crucial career support services, GSDG has the potential to transform the industry and create a new standard for the way software engineers grow and succeed in their careers.
