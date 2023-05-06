@@ -1,0 +1,30 @@
+[ req ]
+default_bits = 2048
+default_md = sha256
+prompt = no
+encrypt_key = no
+distinguished_name = dn
+x509_extensions = req_ext
+
+[ dn ]
+C = US
+ST = California
+L = San Francisco
+O = Hyperledger
+OU = Fabric
+CN = fabric-ca-server
+
+[ req_ext ]
+keyUsage = critical, keyCertSign, cRLSign
+basicConstraints = critical, CA:true, pathlen:1
+subjectAltName = @alt_names
+
+[ alt_names ]
+DNS.1 = network-ca.example.com
+DNS.2 = localhost
+
+[ v3_ca ]
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid:always,issuer
+basicConstraints = CA:true
+keyUsage = critical, digitalSignature, cRLSign, keyCertSign

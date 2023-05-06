@@ -1,0 +1,103 @@
+#############################################################################
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#############################################################################
+
+version: 1.4.9
+
+###############################################################################
+# The port on which the server will listen
+###############################################################################
+port: 7054
+
+###############################################################################
+# The server's certificate and private key.
+# Must be PEM-encoded.
+###############################################################################
+tls:
+  enabled: false
+  certfile: /Users/ryanmiller/Development/GSDG_beta/network/fabric-ca-server/ca.example.com-cert.pem
+  keyfile: /Users/ryanmiller/Development/GSDG_beta/network/fabric-ca-server/server_private_key.pem
+
+###############################################################################
+# CA configuration
+###############################################################################
+ca:
+  # Name of this CA
+  name: Fabric-CA
+
+  # Identifies the CA's key pair for signing certificates.
+  keyfile: /Users/ryanmiller/Development/GSDG_beta/network/crypto-config/peerOrganizations/org1.example.com/ca/priv_sk
+  certfile: /Users/ryanmiller/Development/GSDG_beta/network/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem
+
+  # Supported types: "sqlite3", "postgres", "mysql".
+  db:
+    type: sqlite3
+    datasource: fabric-ca-server.db
+
+  # The fabric-ca server maintains a state for its clients.
+  # This is the directory where the state is maintained.
+  client:
+    state:
+      enabled: true
+      path: clientStateStore
+
+  # Affiliations
+  affiliations:
+    org1:
+      - department1
+      - department2
+    org2:
+      - department1
+
+  # The maximum number of incorrect password attempts allowed.
+  cfg:
+    identities:
+      passwordattempts: 10
+
+###############################################################################
+# Intermediate CA section
+###############################################################################
+intermediate:
+  parentserver:
+    url: <URL of the parent CA server>
+    caname: <Name of the parent CA>
+
+  tls:
+    certfiles:
+      - <Path to the parent CA server's TLS certificate>
+
+###############################################################################
+# CRL configuration
+###############################################################################
+crl:
+  expiry: 24h
+
+###############################################################################
+# LDAP section
+# If you want to use LDAP as the user registry (storage of identities),
+# configure and enable it here.
+###############################################################################
+ldap:
+  enabled: false
+  url: ldap://<LDAP server address>:<LDAP server port>
+  user: <Bind username>
+  password: <Bind password>
+  attribute:
+    names: ["uid", "member"]
+  tls:
+    certfiles:
+      - <Path to the LDAP server's TLS certificate>
+
+###############################################################################
+# BCCSP (BlockChain Crypto Service Provider) section used to select which
+# crypto library implementation to use
+###############################################################################
+bccsp:
+  default: SW
+  sw:
+    hash: SHA2
+    security: 256
+    filekeystore:
+      keystore: msp/keystore
