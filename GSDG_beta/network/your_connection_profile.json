@@ -27,7 +27,7 @@
       "peer0.org1.example.com": {
         "url": "grpc://localhost:7051",
         "tlsCACerts": {
-          "path": "/Users/ryanmiller/Development/GSDG_beta/network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
+          "path": "/Users/ryanmiller/Development/GSDG/GSDG/GSDG_beta/network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
         }
       }
     },
@@ -36,7 +36,7 @@
         "url": "https://localhost:7054",
         "caName": "ca.example.com",
         "tlsCACerts": {
-          "path": "/Users/ryanmiller/Development/GSDG_beta/network/fabric-ca-server/tlsca.example.com-cert.pem"
+          "path": "/Users/ryanmiller/Development/GSDG/GSDG/GSDG_beta/network/fabric-ca-server/tlsca.example.com-cert.pem"
         },
         "httpOptions": {
           "verify": false
@@ -47,7 +47,7 @@
       "orderer.example.com": {
         "url": "grpc://localhost:7050",
         "tlsCACerts": {
-          "path": "/Users/ryanmiller/Development/GSDG_beta/network/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt"
+          "path": "/Users/ryanmiller/Development/GSDG/GSDG/GSDG_beta/network/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt"
         }
       }
     }

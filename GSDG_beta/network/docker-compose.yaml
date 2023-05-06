@@ -19,7 +19,7 @@ services:
     command: sh -c "fabric-ca-server start -b admin:adminpw -d"
     volumes:
       - ./fabric-ca-server:/etc/hyperledger/fabric-ca-server-config
-      - /Users/ryanmiller/Development/GSDG_beta/network/fabric-ca-server/server_private_key.pem:/etc/hyperledger/fabric-ca-server-config/server_private_key.pem
+      - /Users/ryanmiller/Development/GSDG/GSDG/GSDG_beta/network/fabric-ca-server/server_private_key.pem:/etc/hyperledger/fabric-ca-server-config/server_private_key.pem
     networks:
       - gsdg_net
 
@@ -38,9 +38,9 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/orderer
     command: orderer
     volumes:
-      - /Users/ryanmiller/Development/GSDG_beta/network/channel-artifacts/orderer.genesis.block:/var/hyperledger/orderer/orderer.genesis.block
-      - /Users/ryanmiller/Development/GSDG_beta/network/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp:/var/hyperledger/orderer/msp
-      - /Users/ryanmiller/Development/GSDG_beta/network/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/:/var/hyperledger/orderer/tls
+      - /Users/ryanmiller/Development/GSDG/GSDG/GSDG_beta/network/channel-artifacts/orderer.genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - /Users/ryanmiller/Development/GSDG/GSDG/GSDG_beta/network/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp:/var/hyperledger/orderer/msp
+      - /Users/ryanmiller/Development/GSDG/GSDG/GSDG_beta/network/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/:/var/hyperledger/orderer/tls
     ports:
       - 7050:7050
     networks:
@@ -67,8 +67,8 @@ services:
     command: peer node start
     volumes:
       - /var/run/:/host/var/run/
-      - /Users/ryanmiller/Development/GSDG_beta/network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp:/etc/hyperledger/msp/peer
-      - /Users/ryanmiller/Development/GSDG_beta/network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls:/etc/hyperledger/tls
+      - /Users/ryanmiller/Development/GSDG/GSDG/GSDG_beta/network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp:/etc/hyperledger/msp/peer
+      - /Users/ryanmiller/Development/GSDG/GSDG/GSDG_beta/network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls:/etc/hyperledger/tls
   
   your_server:
     build:
@@ -78,6 +78,6 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - /Users/ryanmiller/Development/GSDG_beta/network/your_connection_profile.json:/usr/src/your_connection_profile.json
+      - /Users/ryanmiller/Development/GSDG/GSDG/GSDG_beta/network/your_connection_profile.json:/usr/src/your_connection_profile.json
     networks:
       - gsdg_net
